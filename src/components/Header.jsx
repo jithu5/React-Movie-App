@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import logo from '../assets/movie.png'
 
 function Header() {
   return (
     <>
-      <header className=" headerleft w-full h-fit py-10 flex px-8 md:px-20 items-center justify-between">
+      <header className=" headerleft w-full h-fit py-6 flex px-8 md:px-20 items-center justify-between">
         <div className='flex items-center gap-4 sm:gap-10 md:gap-20'>
           <Link to="/">
-            <img className='w-6 md:w-14'
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/2560px-IMDB_Logo_2016.svg.png"
+            <img className='w-8 md:w-16'
+              src={logo}
               alt=""
             />
           </Link>

@@ -27,7 +27,7 @@ function Cards({movie}) {
           </div>
         ) : (
           <Link to={`/movie/${movie.id}`}>
-            <div className="cards relative rounded-md bg-white hover:scale-125 hover:z-10 transition-all duration-300">
+            <div className="cards relative rounded-md bg-white group hover:scale-125 hover:z-10 transition-all duration-300">
               <img
                 className="img w-full rounded-md"
                 src={`https://image.tmdb.org/t/p/original${
@@ -35,7 +35,7 @@ function Cards({movie}) {
                 }`}
                 alt=""
               />
-              <div className="cardoverlay opacity-0 z-50 hover:opacity-100 absolute inset-0 transition-opacity duration-150 top-[50%] px-2 left[50%] text-white flex flex-col gap-4 translate-y-[-50%]">
+              <div className="cardoverlay  opacity-0 z-50 group-hover:opacity-100 absolute inset-0 transition-opacity duration-200 top-[50%] px-2 left[50%] text-white flex flex-col gap-4 translate-y-[-50%]">
                 <div className="title text-sm md:text-xl font-bold">
                   {movie ? movie.original_title : ""}
                 </div>
