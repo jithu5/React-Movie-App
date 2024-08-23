@@ -37,7 +37,7 @@ function MovieList() {
         <h2 className="text-4xl font-black text-center text-white my-6">{(type ? type.replace('_',' ') : "POPULAR").toUpperCase()}</h2>
         <div className="list cards grid max-sm:gap-3 grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-8 mx-auto w-[90%]">
           {movieList.map((movie) => {
-            return <Cards movie={movie} />;
+            return <Cards key={movie.id} movie={movie} />;
           })}
         </div>
       </div>

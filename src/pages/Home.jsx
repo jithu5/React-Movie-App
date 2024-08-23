@@ -4,29 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import { Link } from "react-router-dom";
 import MovieList from "../components/MovieList";
 
-function Home() {
-  const [popularMovies, setPopularMovies] = useState([]);
-  const MOVIE_KEY = import.meta.env.VITE_TMDB_API_KEY;
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          `https://api.themoviedb.org/3/movie/popular?api_key=${MOVIE_KEY}&language=en-US`
-        );
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        // console.log(data.results);
-        setPopularMovies(data.results);
-      } catch (error) {
-        console.error("Failed to fetch movies:", error);
-      }
-    };
-
-    fetchData(); // Call the async function within useEffect
-  }, []);
-
+function Home({ popularMovies }) {
   return (
     <>
       <div className="mx-auto w-full min-h-screen bg-slate-900 h-fit pb-10">
