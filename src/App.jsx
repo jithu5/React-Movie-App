@@ -35,7 +35,7 @@ function App() {
 
   return (
     <>
-      <div className="w-full min-h-screen h-fit bg-slate-950">
+      <div className="w-full min-h-screen pb-20 h-fit bg-slate-950">
         <Router>
           <Header />
 
